@@ -3,6 +3,10 @@
     "location": "\"Wasted Captain\" Guild",
     "partyXp": 3570
   },
+  "playCounts": {
+    "session": 7,
+    "oneShot": 2
+  },
   "xpCapPerLevel": [
     300,
     900,
