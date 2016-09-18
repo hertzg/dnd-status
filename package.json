@@ -1,0 +1,18 @@
+{
+  "name": "dango-manager",
+  "version": "1.0.0",
+  "description": "Manager Inteface",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {},
+  "author": "",
+  "license": "UNLICENSED",
+  "devDependencies": {
+    "gulp": "github:gulpjs/gulp#4.0",
+    "gulp-bower": "0.0.13",
+    "gulp-debug": "^2.1.2",
+    "merge-stream": "^1.0.0"
+  },
+  "dependencies": {}
+}

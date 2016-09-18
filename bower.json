@@ -1,0 +1,10 @@
+{
+  "name": "dango-manager",
+  "authors": [
+    "George Kotchlamazashvili <georgedot@gmail.com>"
+  ],
+  "dependencies": {
+    "bootstrap": "v3.3.7",
+    "font-awesome": "fontawesome#^4.6.3"
+  }
+}
