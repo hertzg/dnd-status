@@ -73,7 +73,7 @@ echo '<!DOCTYPE html>'
                   . '</div>'
                 . '</div>'
                 . '<p class="text-muted">'
-                  . 'You need to play need Approx. '
+                  . 'You need to play Approx. '
                   . floor($approxSessionsForLevelUp) .'-'. ceil($approxSessionsForLevelUp)
                   . ' more session to level up'
                 . '</p>'
