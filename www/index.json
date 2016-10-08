@@ -1,11 +1,15 @@
 {
   "current": {
-    "location": "Outskirts of Silverymoon",
-    "partyXp": 5350
+    "location": "Crypt of the Eternal Seasons",
+    "partyXp": 6400
   },
   "playCounts": {
-    "session": 9,
+    "session": 10,
     "oneShot": 3
+  },
+  "dmKillCount": {
+    "TPK": 0,
+    "playersKilled": 2
   },
   "xpCapPerLevel": [
     300,
