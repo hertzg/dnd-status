@@ -29,6 +29,9 @@ $xpNeededToLevelUp = $nextLevelXP - $currentPartyXP;
 $avgXpPerSession = $currentPartyXP / $totalPlays;
 $approxSessionsForLevelUp = $xpNeededToLevelUp / $avgXpPerSession;
 
+$dm_tpkCount = $data['dmKillCount']['TPK'];
+$dm_playerKillCount = $data['dmKillCount']['playersKilled'];
+
 echo '<!DOCTYPE html>'
   . '<html lang="en">'
   . '<head>'
@@ -91,6 +94,10 @@ echo '<!DOCTYPE html>'
                 )
               . '</td>'
             . '</tr>'
+            .'<tr>'
+              .'<th>DM Kill Count</th>'
+                .'<td>TPK: '. $dm_tpkCount .', Players: '. $dm_playerCount .'</td>'
+            .'</tr>'
           . '</tbody>'
         . '</table>'
       . '</div>'
