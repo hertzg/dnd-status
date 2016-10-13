@@ -1,15 +1,15 @@
 {
   "current": {
     "location": "Crypt of the Eternal Seasons",
-    "partyXp": 6400
+    "partyXp": 6501
   },
   "playCounts": {
     "session": 10,
     "oneShot": 3
   },
-  "dmKillCount": {
-    "TPK": 0,
-    "playersKilled": 2
+  "dmKillCounts": {
+    "tpk": 0,
+    "player": 2
   },
   "xpCapPerLevel": [
     300,
