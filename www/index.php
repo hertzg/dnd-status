@@ -11,15 +11,16 @@ $nextLevelName = "?";
 $nextLevelXP = null;
 
 foreach ($xpCapPerLevel as $levelIndex => $levelCap) {
-  if ($levelCap >= $currentPartyXP) {
+  if ($levelCap > $currentPartyXP) {
     $nextLevelName = (string)($levelIndex + 2);
     $nextLevelXP = $levelCap;
+    $previousLevelXp = $levelIndex == 0 ? 0 : $xpCapPerLevel[$levelIndex-1];
     break;
   }
   $currentPartyLevelName = (string)($levelIndex + 2);
 }
 
-$levelProgressPercent = round(($currentPartyXP / $nextLevelXP ) * 100, 2);
+$levelProgressPercent = round(($currentPartyXP - $previousLevelXP) / ($nextLevelXP - $previousLevelXP) * 100, 2);
 
 $sessionsPlayed = $data['playCounts']['session'];
 $oneShotsPlayed = $data['playCounts']['oneShot'];
