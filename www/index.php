@@ -14,13 +14,13 @@ foreach ($xpCapPerLevel as $levelIndex => $levelCap) {
   if ($levelCap > $currentPartyXP) {
     $nextLevelName = (string)($levelIndex + 2);
     $nextLevelXP = $levelCap;
-    $previousLevelXp = $levelIndex == 0 ? 0 : $xpCapPerLevel[$levelIndex-1];
     break;
   }
   $currentPartyLevelName = (string)($levelIndex + 2);
+  $currentLevelXp = $levelCap;
 }
 
-$levelProgressPercent = round(($currentPartyXP - $previousLevelXP) / ($nextLevelXP - $previousLevelXP) * 100, 2);
+$levelProgressPercent = round(($currentPartyXP - $currentLevelXp) / ($nextLevelXP - $currentLevelXp) * 100, 2);
 
 $sessionsPlayed = $data['playCounts']['session'];
 $oneShotsPlayed = $data['playCounts']['oneShot'];
@@ -67,8 +67,14 @@ echo '<!DOCTYPE html>'
                   . '<div class="progress-bar progress-bar-success" role="progressbar" '
                   . 'aria-valuenow="'.ceil($levelProgressPercent).'" aria-valuemin="0" aria-valuemax="100"'
                   . 'style="width:'.ceil($levelProgressPercent).'%">'
-                    . '<div style="position:absolute;z-index: 2; top:0; bottom: 0; left: 0; right:0;'
-                    . 'line-height:40px; color:#333;font-weight: bold; font-size: 1.5em;">'
+                    . '<div style="position:absolute; z-index: 2; top:0; bottom: 0; left: 0; right:0; '
+                    . 'white-space:nowrap; text-overflow: ellipsis; line-height:40px; color:#333; '
+                    . 'overflow: hidden; font-weight: bold; font-size: 1.5em;"'
+                    . ' title="'
+                        . htmlspecialchars(number_format($currentPartyXP) . ' (lv. '. $currentPartyLevelName . ')')
+                        . ' / '
+                        . htmlspecialchars(number_format($nextLevelXP) . ' (lv. '. $nextLevelName . ')')
+                    .'">'
                       . htmlspecialchars(number_format($currentPartyXP) . ' (lv. '. $currentPartyLevelName . ')')
                       . ' / '
                       . htmlspecialchars(number_format($nextLevelXP) . ' (lv. '. $nextLevelName . ')')
@@ -76,7 +82,7 @@ echo '<!DOCTYPE html>'
                     . '<span class="sr-only">'. $levelProgressPercent.'% Complete</span>'
                   . '</div>'
                 . '</div>'
-                . '<p class="text-muted">'
+                . '<p class="text-muted" style="font-size: 12px">'
                   . 'You need to play Approx. '
                   . floor($approxSessionsForLevelUp) .'-'. ceil($approxSessionsForLevelUp)
                   . ' more session to level up'
