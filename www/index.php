@@ -6,6 +6,7 @@ $currentPartyLocation = $data['current']['location'];
 $currentPartyXP = $data['current']['partyXp'];
 
 $xpCapPerLevel = $data['xpCapPerLevel'];
+$currentLevelXp = 0;
 $currentPartyLevelName = "1";
 $nextLevelName = "?";
 $nextLevelXP = null;
@@ -33,6 +34,12 @@ $approxSessionsForLevelUp = $xpNeededToLevelUp / $avgXpPerSession;
 $tpKillCount = $data['dmKillCounts']['tpk'];
 $playerKillCount = $data['dmKillCounts']['player'];
 
+require_once 'fns/get_compressible_config.php';
+$compressibles = get_compressible_config();
+
+require_once 'fns/render_css_links.php';
+require_once 'fns/render_script_tags.php';
+
 echo '<!DOCTYPE html>'
   . '<html lang="en">'
   . '<head>'
@@ -42,8 +49,7 @@ echo '<!DOCTYPE html>'
     . '<meta name="description" content="">'
     . '<meta name="author" content="">'
     . '<title>Cult of the Treacherous God</title>'
-    . '<link href="/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">'
-    . '<link href="/vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet">'
+    . render_css_links('index', $compressibles)
   . '</head>'
   . '<body>'
     . '<div class="container" style="margin-top: 20px;">'
@@ -109,7 +115,6 @@ echo '<!DOCTYPE html>'
         . '</table>'
       . '</div>'
     . '</div>'
-    . '<script src="/vendor/jquery/jquery.min.js"></script>'
-    . '<script src="/vendor/bootstrap/js/bootstrap.min.js"></script>'
+    . render_script_tags('index', $compressibles)
   . '</body>'
   . '</html>';

@@ -4,6 +4,7 @@
     "George Kotchlamazashvili <georgedot@gmail.com>"
   ],
   "dependencies": {
+    "jquery": "1.9.1 - 3",
     "bootstrap": "v3.3.7",
     "font-awesome": "fontawesome#^4.6.3"
   }
