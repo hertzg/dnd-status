@@ -29,8 +29,8 @@ $oneShotsPlayed = $data['playCounts']['oneShot'];
 $totalPlays = $sessionsPlayed + $oneShotsPlayed;
 
 $xpNeededToLevelUp = $nextLevelXP - $currentPartyXP;
-$avgXpPerSession = $currentPartyXP / $totalPlays;
-$approxSessionsForLevelUp = $xpNeededToLevelUp / $avgXpPerSession;
+$avgXpPerSession = $totalPlays ? $currentPartyXP / $totalPlays : 0;
+$approxSessionsForLevelUp = $avgXpPerSession ? $xpNeededToLevelUp / $avgXpPerSession : 0;
 
 $tpKillCount = $data['dmKillCounts']['tpk'];
 $playerKillCount = $data['dmKillCounts']['player'];
