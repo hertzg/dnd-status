@@ -2,10 +2,12 @@
 
 $data = json_decode(file_get_contents('./index.json'), true);
 
+$campaignName = $data['name'];
 $currentPartyLocation = $data['current']['location'];
 $currentPartyXP = $data['current']['partyXp'];
 
 $xpCapPerLevel = $data['xpCapPerLevel'];
+$currentLevelXp = 0;
 $currentPartyLevelName = "1";
 $nextLevelName = "?";
 $nextLevelXP = null;
@@ -48,7 +50,7 @@ echo '<!DOCTYPE html>'
   . '<body>'
     . '<div class="container" style="margin-top: 20px;">'
       . '<div class="header clearfix">'
-        . '<h3 class="text-muted">Cult of the Treacherous God</h3>'
+        . '<h3 class="text-muted">' . htmlspecialchars($campaignName) .'</h3>'
       . '</div>'
       . '<div class="jumbotron">'
         . '<h1><span class="fa fa-feed"></span> Current Status</h1>'

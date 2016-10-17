@@ -1,15 +1,16 @@
 {
+  "name": "Out of the Abyss",
   "current": {
-    "location": "Crypt of the Eternal Seasons",
-    "partyXp": 6500
+    "location": "Slave Dens",
+    "partyXp": 0
   },
   "playCounts": {
-    "session": 10,
-    "oneShot": 3
+    "session": 0,
+    "oneShot": 0
   },
   "dmKillCounts": {
     "tpk": 0,
-    "player": 2
+    "player": 0
   },
   "xpCapPerLevel": [
     300,
