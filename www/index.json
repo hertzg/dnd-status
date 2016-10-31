@@ -1,11 +1,11 @@
 {
   "name": "Out of the Abyss",
   "current": {
-    "location": "Near Dark Lake",
-    "partyXp": 1435
+    "location": "Welcome Grove",
+    "partyXp": 2185
   },
   "playCounts": {
-    "session": 2,
+    "session": 3,
     "oneShot": 0
   },
   "dmKillCounts": {
