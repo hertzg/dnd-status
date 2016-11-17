@@ -1,11 +1,11 @@
 {
   "name": "Out of the Abyss",
   "current": {
-    "location": "Somewhere in the Underdark",
-    "partyXp": 2975
+    "location": "Gumbulul Borothers Caravan",
+    "partyXp": 3100
   },
   "playCounts": {
-    "session": 3,
+    "session": 4,
     "oneShot": 0
   },
   "dmKillCounts": {
