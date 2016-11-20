@@ -1,16 +1,16 @@
 {
-  "name": "Out of the Abyss",
+  "name": "Lost mines of Phandelver",
   "current": {
-    "location": "Gumbulul Brothers Caravan",
-    "partyXp": 3100
+    "location": "Triboar Trail",
+    "partyXp": 50
   },
   "playCounts": {
-    "session": 4,
+    "session": 1,
     "oneShot": 0
   },
   "dmKillCounts": {
     "tpk": 0,
-    "player": 2
+    "player": 0
   },
   "xpCapPerLevel": [
     300,
