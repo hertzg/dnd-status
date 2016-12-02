@@ -1,11 +1,11 @@
 {
   "name": "Lost mines of Phandelver",
   "current": {
-    "location": "Triboar Trail",
-    "partyXp": 75
+    "location": "Eating Cave",
+    "partyXp": 350
   },
   "playCounts": {
-    "session": 1,
+    "session": 2,
     "oneShot": 0
   },
   "dmKillCounts": {
