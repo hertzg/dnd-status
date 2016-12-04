@@ -1,11 +1,11 @@
 {
   "name": "Lost mines of Phandelver",
   "current": {
-    "location": "Eating Cave",
-    "partyXp": 350
+    "location": "Mad King's Catacombs",
+    "partyXp": 680
   },
   "playCounts": {
-    "session": 2,
+    "session": 3,
     "oneShot": 0
   },
   "dmKillCounts": {
